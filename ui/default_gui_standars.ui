@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>478</width>
-    <height>368</height>
+    <width>457</width>
+    <height>308</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,8 +18,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>461</width>
-     <height>341</height>
+     <width>441</width>
+     <height>291</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -35,7 +35,7 @@
        <x>10</x>
        <y>10</y>
        <width>211</width>
-       <height>301</height>
+       <height>251</height>
       </rect>
      </property>
      <property name="title">
@@ -58,108 +58,90 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>190</y>
+        <y>160</y>
         <width>191</width>
-        <height>101</height>
+        <height>81</height>
        </rect>
       </property>
       <property name="title">
        <string>Material</string>
       </property>
-      <widget class="QPushButton" name="pb_material">
+      <widget class="QWidget" name="">
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>30</y>
-         <width>151</width>
-         <height>27</height>
+         <y>20</y>
+         <width>171</width>
+         <height>54</height>
         </rect>
        </property>
-       <property name="text">
-        <string>Seleccionar material</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="l_max_tens_adm">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>60</y>
-         <width>61</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>S [MPa] :</string>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="le_max_tens_adm">
-       <property name="geometry">
-        <rect>
-         <x>70</x>
-         <y>60</y>
-         <width>41</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>70</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Máxima longitud NO soportada, en mm.&lt;br/&gt;Solo es necesario para diseño por &lt;span style=&quot; font-weight:600;&quot;&gt;presión interna&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>1000</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="pb_eficiencia_soldadura">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>60</y>
-         <width>41</width>
-         <height>27</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="l_effi_soldadura">
-       <property name="geometry">
-        <rect>
-         <x>120</x>
-         <y>60</y>
-         <width>21</width>
-         <height>25</height>
-        </rect>
-       </property>
-       <property name="whatsThis">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eficiencia de Soldadura. &lt;br/&gt;1 - Total, 0.85 - Parcial, 0.7 -Parcial&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-       <property name="text">
-        <string>E :</string>
-       </property>
+       <layout class="QGridLayout" name="gridLayout_9">
+        <item row="0" column="0" colspan="4">
+         <widget class="QPushButton" name="pb_material">
+          <property name="text">
+           <string>Seleccionar material</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="l_max_tens_adm">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>S [MPa] :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLineEdit" name="le_max_tens_adm">
+          <property name="minimumSize">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>70</width>
+            <height>25</height>
+           </size>
+          </property>
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Máxima longitud NO soportada, en mm.&lt;br/&gt;Solo es necesario para diseño por &lt;span style=&quot; font-weight:600;&quot;&gt;presión interna&lt;/span&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>1000</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="2">
+         <widget class="QLabel" name="l_effi_soldadura">
+          <property name="whatsThis">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Eficiencia de Soldadura. &lt;br/&gt;1 - Total, 0.85 - Parcial, 0.7 -Parcial&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="text">
+           <string>E :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="3">
+         <widget class="QPushButton" name="pb_eficiencia_soldadura">
+          <property name="text">
+           <string>1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
       </widget>
      </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>11</x>
-        <y>32</y>
+        <y>20</y>
         <width>190</width>
-        <height>151</height>
+        <height>131</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -286,187 +268,160 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="layoutWidget">
+    <widget class="QGroupBox" name="groupBoxDiseo">
      <property name="geometry">
       <rect>
-       <x>230</x>
-       <y>10</y>
-       <width>221</width>
-       <height>301</height>
+       <x>232</x>
+       <y>12</y>
+       <width>199</width>
+       <height>181</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
-      <item>
-       <widget class="QGroupBox" name="groupBoxDiseo">
-        <property name="title">
-         <string>Condiciones de diseño</string>
-        </property>
-        <widget class="QWidget" name="layoutWidget">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>31</y>
-           <width>203</width>
-           <height>217</height>
-          </rect>
+     <property name="title">
+      <string>Condiciones de diseño</string>
+     </property>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>13</x>
+        <y>20</y>
+        <width>172</width>
+        <height>154</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="l_presion">
+           <property name="text">
+            <string>Presión [kPag] :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="le_presion">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="l_temperatura">
+           <property name="text">
+            <string>Temperatura [ºC] :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="le_temperatura">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>100</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_presiones_hidrostaticas">
+         <property name="text">
+          <string>Presiónes hidrostáticas</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_3">
-          <item>
-           <layout class="QGridLayout" name="gridLayout">
-            <item row="0" column="0">
-             <widget class="QLabel" name="l_tipo_presion">
-              <property name="text">
-               <string>Tipo de presión</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="2">
-             <widget class="QLineEdit" name="le_presion">
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>70</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>100</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1" colspan="2">
-             <widget class="QPushButton" name="pb_tipo_presion">
-              <property name="text">
-               <string>Interna</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0" colspan="2">
-             <widget class="QLabel" name="l_temperatura">
-              <property name="text">
-               <string>Temperatura [ºC] :</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="l_presion">
-              <property name="text">
-               <string>Presión [kPag] :</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="2">
-             <widget class="QLineEdit" name="le_temperatura">
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>70</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>100</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pb_presiones_hidrostaticas">
-            <property name="text">
-             <string>Presiónes hidrostáticas</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QLabel" name="l_corrosion">
-              <property name="text">
-               <string>Corrosión</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <layout class="QGridLayout" name="gridLayout_2">
-              <item row="0" column="0">
-               <widget class="QLabel" name="l_corrosion_int">
-                <property name="text">
-                 <string>Interna [mm] :</string>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QLineEdit" name="le_corrosion_int">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="QLabel" name="l_corrosion_int_2">
-                <property name="text">
-                 <string>Externa [mm] :</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1">
-               <widget class="QLineEdit" name="le_corrosion_int_2">
-                <property name="minimumSize">
-                 <size>
-                  <width>50</width>
-                  <height>20</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>70</width>
-                  <height>25</height>
-                 </size>
-                </property>
-                <property name="text">
-                 <string>0</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-         </layout>
         </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_calcular">
-        <property name="text">
-         <string>Calcular</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="verticalLayout">
+         <item>
+          <widget class="QLabel" name="l_corrosion">
+           <property name="text">
+            <string>Corrosión</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <item row="0" column="0">
+            <widget class="QLabel" name="l_corrosion_int">
+             <property name="text">
+              <string>Interna [mm] :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="le_corrosion_int">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="l_corrosion_int_2">
+             <property name="text">
+              <string>Externa [mm] :</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="le_corrosion_int_2">
+             <property name="minimumSize">
+              <size>
+               <width>50</width>
+               <height>20</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>70</width>
+               <height>25</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="cabezales">
@@ -476,10 +431,10 @@
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
-       <x>240</x>
+       <x>220</x>
        <y>10</y>
-       <width>191</width>
-       <height>181</height>
+       <width>201</width>
+       <height>171</height>
       </rect>
      </property>
      <property name="title">
@@ -488,26 +443,40 @@
      <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>7</x>
-        <y>32</y>
-        <width>171</width>
-        <height>141</height>
+        <x>8</x>
+        <y>33</y>
+        <width>181</width>
+        <height>126</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_8">
+      <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_7">
-         <item>
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
           <widget class="QLabel" name="l_tipo_cabezal_sup_2">
            <property name="text">
             <string>Tipo de cabezal</string>
            </property>
           </widget>
          </item>
-         <item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="l_tipo_conformado_cabezal_inf">
+           <property name="text">
+            <string>Conformado</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
           <widget class="QPushButton" name="pb_tipo_cabezal_inf">
            <property name="text">
             <string>Semielíptico 2 : 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pb_tipo_conformado_cab_inf">
+           <property name="text">
+            <string>En caliente</string>
            </property>
           </widget>
          </item>
@@ -515,10 +484,10 @@
        </item>
        <item>
         <layout class="QGridLayout" name="gridLayout_6">
-         <item row="0" column="0">
-          <widget class="QLabel" name="l_diametro_cab_inf">
+         <item row="2" column="0">
+          <widget class="QLabel" name="l_radio_corona_cab_inf">
            <property name="text">
-            <string>Diámetro [mm] :</string>
+            <string>R corona [mm] :</string>
            </property>
           </widget>
          </item>
@@ -538,6 +507,32 @@
            </property>
            <property name="text">
             <string>1000</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QLineEdit" name="le_radio_corona_cab_inf">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <widget class="QLabel" name="l_diametro_cab_inf">
+           <property name="text">
+            <string>Diámetro [mm] :</string>
            </property>
           </widget>
          </item>
@@ -567,15 +562,128 @@
            </property>
           </widget>
          </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>13</y>
+       <width>189</width>
+       <height>160</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Cabezal superior</string>
+     </property>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>11</x>
+        <y>33</y>
+        <width>171</width>
+        <height>126</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <layout class="QGridLayout" name="gridLayout_7">
+         <item row="0" column="0">
+          <widget class="QLabel" name="l_tipo_cabezal_sup">
+           <property name="text">
+            <string>Tipo de cabezal</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="l_tipo_conformado_cabezal_sup">
+           <property name="text">
+            <string>Conformado</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QPushButton" name="pb_tipo_cabezal_sup">
+           <property name="text">
+            <string>Semielíptico 2 : 1</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pb_tipo_conformado_cab_sup">
+           <property name="text">
+            <string>En caliente</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="gridLayout_5">
+         <item row="0" column="0">
+          <widget class="QLabel" name="l_diametro_cab_sup">
+           <property name="text">
+            <string>Diámetro [mm] :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="le_diametro_cab_sup">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>1000</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="l_radio_filete_cab_sup">
+           <property name="text">
+            <string>R filete [mm] :</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QLineEdit" name="le_radio_filete_cab_sup">
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>20</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>70</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>10</string>
+           </property>
+          </widget>
+         </item>
          <item row="2" column="0">
-          <widget class="QLabel" name="l_radio_corona_cab_inf">
+          <widget class="QLabel" name="l_radio_corona_cab_sup">
            <property name="text">
             <string>R corona [mm] :</string>
            </property>
           </widget>
          </item>
          <item row="2" column="1">
-          <widget class="QLineEdit" name="le_radio_corona_cab_inf">
+          <widget class="QLineEdit" name="le_radio_corona_cab_sup">
            <property name="minimumSize">
             <size>
              <width>50</width>
@@ -598,143 +706,223 @@
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="">
+   </widget>
+   <widget class="QWidget" name="tab">
+    <attribute name="title">
+     <string>Resultados</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_resultados_envolvente">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>11</y>
+       <y>10</y>
        <width>181</width>
-       <height>211</height>
+       <height>80</height>
       </rect>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_9">
-      <item>
-       <widget class="QGroupBox" name="groupBox">
-        <property name="title">
-         <string>Cabezal superior</string>
-        </property>
-        <widget class="QWidget" name="">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>31</y>
-           <width>161</width>
-           <height>141</height>
-          </rect>
-         </property>
-         <layout class="QVBoxLayout" name="verticalLayout_6">
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_5">
-            <item>
-             <widget class="QLabel" name="l_tipo_cabezal_sup">
-              <property name="text">
-               <string>Tipo de cabezal</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pb_tipo_cabezal_sup">
-              <property name="text">
-               <string>Semielíptico 2 : 1</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QGridLayout" name="gridLayout_5">
-            <item row="0" column="0">
-             <widget class="QLabel" name="l_diametro_cab_sup">
-              <property name="text">
-               <string>Diámetro [mm] :</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLineEdit" name="le_diametro_cab_sup">
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>70</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>1000</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="l_radio_filete_cab_sup">
-              <property name="text">
-               <string>R filete [mm] :</string>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QLineEdit" name="le_radio_filete_cab_sup">
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>70</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>10</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="l_radio_corona_cab_sup">
-              <property name="text">
-               <string>R corona [mm] :</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLineEdit" name="le_radio_corona_cab_sup">
-              <property name="minimumSize">
-               <size>
-                <width>50</width>
-                <height>20</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>70</width>
-                <height>25</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>10</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
-        </widget>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="pb_calcular_2">
-        <property name="text">
-         <string>Calcular</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
+     <property name="title">
+      <string>Envolvente</string>
+     </property>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espesor [mm] :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_espesor_envolvente">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_resultados_pollera_superior">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>90</y>
+       <width>181</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Pollera superior</string>
+     </property>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espesor [mm] :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_espesor_pollera_sup">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_pollera_inferior">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>181</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Pollera inferior</string>
+     </property>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espesor [mm] :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_espesor_pollera_inf">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_resultados_cabezal_inferior">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>90</y>
+       <width>181</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Cabezal inferior</string>
+     </property>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espesor [mm] :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_espesor_cabezal_inf">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_resultados_cabezal_superior">
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>10</y>
+       <width>181</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Cabezal superior</string>
+     </property>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>20</y>
+        <width>71</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Espesor [mm] :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="l_espesor_cabezal_sup">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>20</y>
+        <width>31</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_2">
+    <attribute name="title">
+     <string>Presión externa</string>
+    </attribute>
+    <widget class="QGroupBox" name="groupBox_verificacion_p_externa">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>421</width>
+       <height>251</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Verifiación por presión externa</string>
+     </property>
     </widget>
    </widget>
   </widget>

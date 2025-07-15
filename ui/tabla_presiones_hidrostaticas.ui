@@ -25,7 +25,7 @@
    <property name="title">
     <string>Polleras</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -40,7 +40,7 @@
        <property name="title">
         <string>Superior</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -74,7 +74,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="l_valor_phidro_poll_sup">
            <property name="text">
-            <string/>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -87,7 +87,7 @@
        <property name="title">
         <string>Inferior</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -121,7 +121,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="l_valor_phidro_poll_inf">
            <property name="text">
-            <string/>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -144,7 +144,7 @@
    <property name="title">
     <string>Cabezales</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -159,7 +159,7 @@
        <property name="title">
         <string>Superior</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -193,7 +193,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="l_valor_phidro_cab_sup">
            <property name="text">
-            <string/>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -206,7 +206,7 @@
        <property name="title">
         <string>Inferior</string>
        </property>
-       <widget class="QWidget" name="">
+       <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
           <x>10</x>
@@ -240,7 +240,7 @@
          <item row="1" column="1">
           <widget class="QLabel" name="l_valor_phidro_cab_inf">
            <property name="text">
-            <string/>
+            <string>0</string>
            </property>
           </widget>
          </item>
@@ -263,7 +263,7 @@
    <property name="title">
     <string>Envolvente</string>
    </property>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>11</x>
@@ -297,14 +297,14 @@
      <item row="1" column="1">
       <widget class="QLabel" name="l_valor_phidro_envolvente">
        <property name="text">
-        <string>123</string>
+        <string>0</string>
        </property>
       </widget>
      </item>
     </layout>
    </widget>
   </widget>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>140</x>
