@@ -6,6 +6,8 @@ import platform
 
 from PyQt5.QtWidgets import QApplication, QMainWindow
 
+from PyQt5.QtGui import QColor, QPalette
+
 from default_gui_standars import Ui_Dialog as UiMain
 from tabla_materiales import Ui_Dialog as UiTablaMateriales
 from tabla_presiones_hidrostaticas import Ui_Dialog as UiTablaPresionesHidrostaticas
@@ -17,20 +19,46 @@ from datos_disenio import DatosDisenio
 from p_hidrostatica import PresionesHidrostaticas
 
 class GUI(QMainWindow,UiMain): 
+    
+    listas_line_edit = [
+        "le_diametro_int_envolvente",
+        "le_altura_envolvente",
+        "le_max_tens_adm",
+        "le_presion",
+        "le_corrosion_int",
+        "le_corrosion_ext",
+        "le_diametro_cab_inf"
+    ]
+    
     def __init__(self, parent=None):
         super(GUI, self).__init__(parent)
         self.setupUi(self)
-        self.config_widgets()
         self.model = Model()
+        self.config_widgets()
+        
+    def validar_entry(self, entry):
+        """Valida el texto del entry usando el un método del model."""
+        texto = entry.text()
+        if self.model.validar_numerico(texto):
+            palette = entry.palette()
+            palette.setColor(QPalette.Text, QColor("black"))
+            entry.setPalette(palette)
+        else:
+            palette = entry.palette()
+            palette.setColor(QPalette.Text, QColor("red"))
+            entry.setPalette(palette)
 
     def config_widgets(self):
         self.config_botones()
         self.config_entrys()
+
         
     def config_entrys(self):
-        #cambios en datos de envolvente
-        self.le_diametro_int_envolvente.textChanged.connect(self.model.calcular_espesor_envolvente)
-        self.le_altura_envolvente.textChanged.connect(self.model.calcular_espesor_envolvente)
+        for e in self.listas_line_edit:
+            line_edit = getattr(self, e)
+            line_edit.textChanged.connect(lambda text, le=line_edit: self.validar_entry(le))
+
+
         
         #cambios en datos de materiales
         self.le_max_tens_adm.textChanged.connect(self.model.calcular_espesores)
