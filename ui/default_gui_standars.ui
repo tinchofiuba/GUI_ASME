@@ -71,7 +71,7 @@
         <rect>
          <x>10</x>
          <y>30</y>
-         <width>181</width>
+         <width>191</width>
          <height>62</height>
         </rect>
        </property>
@@ -584,8 +584,8 @@
        <rect>
         <x>10</x>
         <y>33</y>
-        <width>211</width>
-        <height>131</height>
+        <width>217</width>
+        <height>136</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -714,7 +714,7 @@
     <widget class="QGroupBox" name="groupBox_resultados_envolvente">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>10</y>
        <width>181</width>
        <height>80</height>
@@ -727,20 +727,20 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>71</width>
+        <y>30</y>
+        <width>51</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Espesor [mm] :</string>
+       <string>t [mm] :</string>
       </property>
      </widget>
      <widget class="QLabel" name="l_espesor_envolvente">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>70</x>
+        <y>30</y>
         <width>31</width>
         <height>16</height>
        </rect>
@@ -753,7 +753,7 @@
     <widget class="QGroupBox" name="groupBox_resultados_pollera_superior">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>90</y>
        <width>181</width>
        <height>80</height>
@@ -766,20 +766,20 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>71</width>
+        <y>30</y>
+        <width>51</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Espesor [mm] :</string>
+       <string>t [mm] :</string>
       </property>
      </widget>
      <widget class="QLabel" name="l_espesor_pollera_sup">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>70</x>
+        <y>30</y>
         <width>31</width>
         <height>16</height>
        </rect>
@@ -792,7 +792,7 @@
     <widget class="QGroupBox" name="groupBox_pollera_inferior">
      <property name="geometry">
       <rect>
-       <x>20</x>
+       <x>30</x>
        <y>170</y>
        <width>181</width>
        <height>80</height>
@@ -805,20 +805,20 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>71</width>
+        <y>30</y>
+        <width>51</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Espesor [mm] :</string>
+       <string>t [mm] :</string>
       </property>
      </widget>
      <widget class="QLabel" name="l_espesor_pollera_inf">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>70</x>
+        <y>30</y>
         <width>31</width>
         <height>16</height>
        </rect>
@@ -831,7 +831,7 @@
     <widget class="QGroupBox" name="groupBox_resultados_cabezal_inferior">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>90</y>
        <width>181</width>
        <height>80</height>
@@ -844,20 +844,20 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>71</width>
+        <y>30</y>
+        <width>51</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Espesor [mm] :</string>
+       <string>t [mm] :</string>
       </property>
      </widget>
      <widget class="QLabel" name="l_espesor_cabezal_inf">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>70</x>
+        <y>30</y>
         <width>31</width>
         <height>16</height>
        </rect>
@@ -870,7 +870,7 @@
     <widget class="QGroupBox" name="groupBox_resultados_cabezal_superior">
      <property name="geometry">
       <rect>
-       <x>230</x>
+       <x>280</x>
        <y>10</y>
        <width>181</width>
        <height>80</height>
@@ -883,20 +883,20 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
-        <width>71</width>
+        <y>30</y>
+        <width>51</width>
         <height>16</height>
        </rect>
       </property>
       <property name="text">
-       <string>Espesor [mm] :</string>
+       <string>t [mm] :</string>
       </property>
      </widget>
      <widget class="QLabel" name="l_espesor_cabezal_sup">
       <property name="geometry">
        <rect>
-        <x>90</x>
-        <y>20</y>
+        <x>70</x>
+        <y>30</y>
         <width>31</width>
         <height>16</height>
        </rect>

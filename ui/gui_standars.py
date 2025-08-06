@@ -27,7 +27,12 @@ class GUI(QMainWindow,UiMain):
         "le_presion",
         "le_corrosion_int",
         "le_corrosion_ext",
-        "le_diametro_cab_inf"
+        "le_diametro_cab_inf",
+        "le_diametro_cab_sup",
+        "le_radio_filete_cab_sup",
+        "le_radio_filete_cab_inf",
+        "le_radio_corona_cab_sup",
+        "le_radio_corona_cab_inf"
     ]
     
     def __init__(self, parent=None):
