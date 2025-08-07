@@ -13,33 +13,34 @@ from tabla_materiales import Ui_Dialog as UiTablaMateriales
 from tabla_presiones_hidrostaticas import Ui_Dialog as UiTablaPresionesHidrostaticas
 
 from model import Model
-from envolvente import Envolvente
-from cabezales import CabeSup, CabeInf
 from datos_disenio import DatosDisenio
 from p_hidrostatica import PresionesHidrostaticas
 
 class GUI(QMainWindow,UiMain): 
-    
-    listas_line_edit = [
-        "le_diametro_int_envolvente",
-        "le_altura_envolvente",
-        "le_max_tens_adm",
-        "le_presion",
-        "le_corrosion_int",
-        "le_corrosion_ext",
-        "le_diametro_cab_inf",
-        "le_diametro_cab_sup",
-        "le_radio_filete_cab_sup",
-        "le_radio_filete_cab_inf",
-        "le_radio_corona_cab_sup",
-        "le_radio_corona_cab_inf"
-    ]
     
     def __init__(self, parent=None):
         super(GUI, self).__init__(parent)
         self.setupUi(self)
         self.model = Model()
         self.config_widgets()
+        acciones_line_edits = {
+        "le_diametro_int_envolvente": self.model.env.set_diametro,
+        "le_altura_envolvente": self.dummy(),
+        "le_max_tens_adm": self.dummy(),
+        "le_presion": self.dummy(),
+        "le_corrosion_int": self.dummy(),
+        "le_corrosion_ext": self.dummy(),
+        "le_diametro_cab_inf": self.dummy(),
+        "le_diametro_cab_sup": self.dummy(),
+        "le_radio_filete_cab_sup": self.dummy(),
+        "le_radio_filete_cab_inf": self.dummy(),
+        "le_radio_corona_cab_sup": self.dummy(),
+        "le_radio_corona_cab_inf": self.dummy()
+    }
+        
+    def dummy(self):
+        """Método dummy para evitar errores de sintaxis en el diccionario."""
+        pass
         
     def validar_entry(self, entry):
         """Valida el texto del entry usando el un método del model."""
@@ -62,8 +63,6 @@ class GUI(QMainWindow,UiMain):
         for e in self.listas_line_edit:
             line_edit = getattr(self, e)
             line_edit.textChanged.connect(lambda text, le=line_edit: self.validar_entry(le))
-
-
         
         #cambios en datos de materiales
         self.le_max_tens_adm.textChanged.connect(self.model.calcular_espesores)

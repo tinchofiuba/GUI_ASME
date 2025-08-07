@@ -1,7 +1,6 @@
 
 class Cabezal:
     def __init__(self):
-        self.diametro = 1000
         self.espesor = 3 #en mm
         self.tipo = "Semielíptico 2 : 1"
         self.altura = 250
@@ -10,49 +9,45 @@ class Cabezal:
         self.conformado = "Caliente"
         self.radio_filete = 50
         self.radio_corona = 50
-        self.S = 1000
-        self.E = 1
-        self.Phidro = 0
-        self.P_externa = 100 #kPa
         
     def chequeo_condicion_limite(self): #cada norma tiene sus límites esto es solo un warning
         print("aún en desarrollo")
         
-    def setear_corrosion_interna(self, corr_interna):
+    def set_corrosion_interna(self, corr_interna):
         self.corr_interna = corr_interna
+        self.calcular_espesor_cabezal()
     
-    def setear_corrosion_externa(self, corr_externa):
+    def set_corrosion_externa(self, corr_externa):
         self.corr_externa = corr_externa
+        self.calcular_espesor_cabezal()
         
-    def setear_radio_filete(self, radio_filete):
+    def set_radio_filete(self, radio_filete):
         self.radio_filete = radio_filete
-
-    def setear_radio_corona(self, radio_corona):
+        self.calcular_espesor_cabezal()
+        
+    def set_radio_corona(self, radio_corona):
         self.radio_corona = radio_corona
+        self.calcular_espesor_cabezal()
         
-    def setear_tipo(self, tipo_cabezal):
+    def set_tipo(self, tipo_cabezal):
         self.tipo = tipo_cabezal
+        self.calcular_espesor_cabezal()
         
-    def setear_diametro(self, diametro):
-        self.diametro = diametro
-        
-    def setear_tipo_conformado(self, tipo_conformado):
+    def set_tipo_conformado(self, tipo_conformado):
         self.conformado = tipo_conformado
+        self.calcular_espesor_cabezal()
         
-    def setear_altura_cabezal(self, altura):
+    def set_altura_cabezal(self, altura):
         self.altura = altura
+        self.calcular_espesor_cabezal()
         
-    def setear_S(self, S):
-        self.S = S
-        
-    def setear_E(self, E):
-        self.E = E
-        
-    def setear_tipo_cabezal(self, tipo_cabezal):
+    def set_tipo_cabezal(self, tipo_cabezal):
         self.tipo = tipo_cabezal
+        self.calcular_espesor_cabezal()
         
-    def setar_tipo_conformado(self, conformado):
+    def set_tipo_conformado(self, conformado):
         self.conformado = conformado
+        self.calcular_espesor_cabezal()
         
     def adicional_factor_conformado(self):
         if self.conformado == "En caliente":
@@ -62,17 +57,16 @@ class Cabezal:
         else:
             raise ValueError("Conformado no reconocido")
     
-    def calcular_espesor(self, presion):
-        self.presion = presion
+    def calcular_espesor(self, P, S, E, D):
+        self.chequeo_condicion_limite()
         
         if self.tipo == "Semielíptico 2 : 1":
-            self.espesor = (self.presion * self.diametro) / (2 * self.S * self.E)
-            
+            self.espesor = (P * D) / (2 * S * E)
         elif self.tipo == "Semiesférico":
-            self.espesor = (self.presion * self.diametro) / (4 * self.S * self.E)
-            
+            self.espesor = (P * D) / (4 * S * E)
+
         elif self.tipo == "Toriesférico":
-            self.espesor = (self.presion * self.diametro) / (3 * self.S * self.E)
+            self.espesor = (P * D) / (3 * S * E)
         else:
             self.espesor = None
             

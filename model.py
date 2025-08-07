@@ -1,6 +1,8 @@
 import numpy as np
 from PyQt5.QtCore import pyqtSignal, QObject
-
+from cabezales import Cabezal
+from envolvente import Envolvente 
+from PyQt5.QtWidgets import QMainWindow
 
 class Model(QObject):
 
@@ -12,6 +14,8 @@ class Model(QObject):
 
     def __init__(self, parent=None):
         super(Model, self).__init__(parent)
+        self.cab = Cabezal()
+        self.env = Envolvente()
         
     def calcular_espesor_envolvente(self):
         print("Calculando espesor de envolvente")
@@ -21,6 +25,11 @@ class Model(QObject):
         
     def calcular_espesor_cabezal(self)->float:
         print("Calculando espesor de cabezal")
+        
+    def set_presion(self, presion):
+        self.presion = presion
+        self.cab.set_presion(presion)
+        print(f"Presión establecida: {self.presion}")
         
     def validar_numerico(self, texto)->bool:
         """Valida si el texto ingresado es un número (entero o decimal)."""
