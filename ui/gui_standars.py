@@ -15,16 +15,13 @@ from model import Model
 from datos_disenio import DatosDisenio
 from p_hidrostatica import PresionesHidrostaticas
 
-# Paleta de verdes modernos para GUI
-# Verde intenso: #10B981 (Esmeralda 500 - moderno, no chillón, no opaco)
-# Verde medio: #34D399 (Esmeralda 400 - tono intermedio)    
-# Verde claro: #6EE7B7 (Esmeralda 300 - tono suave)
 colores_usados = {
     "eficiencia_soldadura" : {
         "1": "#10B981",      # Verde intenso
         "0.7": "#6EE7B7",    # Verde claro
         "0.85": "#34D399"    # Verde medio
     },
+    
     "presion_hidrostatica": "#66ccff" # Celeste clarito
 }
 
@@ -40,17 +37,17 @@ class GUI(QMainWindow,UiMain):
         self.config_widgets()
         acciones_line_edits = {
         "le_diametro_int_envolvente": self.model.set_diametro,
-        "le_altura_envolvente": self.dummy(),
-        "le_max_tens_adm": self.dummy(),
-        "le_presion": self.dummy(),
-        "le_corrosion_int": self.dummy(),
-        "le_corrosion_ext": self.dummy(),
-        "le_diametro_cab_inf": self.dummy(),
-        "le_diametro_cab_sup": self.dummy(),
-        "le_radio_filete_cab_sup": self.dummy(),
-        "le_radio_filete_cab_inf": self.dummy(),
-        "le_radio_corona_cab_sup": self.dummy(),
-        "le_radio_corona_cab_inf": self.dummy()
+        "le_altura_envolvente": self.model.set_altura_envolvente,
+        "le_max_tens_adm": self.model.set_max_tens_adm,
+        "le_presion": self.model.set_presion,
+        "le_corrosion_int": self.model.set_corrosion_interna,
+        "le_corrosion_ext": self.model.set_corrosion_externa,
+        "le_diametro_cab_inf": self.model.cab.set_diametro('inf'),
+        "le_diametro_cab_sup": self.model.cab.set_diametro('sup'),
+        "le_radio_filete_cab_sup": self.model.cab.set_radio_filete('sup'),
+        "le_radio_filete_cab_inf": self.model.cab.set_radio_filete('inf'),
+        "le_radio_corona_cab_sup": self.model.cab.set_radio_corona('sup'),
+        "le_radio_corona_cab_inf": self.model.cab.set_radio_corona('inf')
     }
 
     def configuraciones_iniciales(self):
