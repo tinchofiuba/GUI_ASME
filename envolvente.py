@@ -5,6 +5,7 @@ class Envolvente():
         self.orientacion = "Vertical"
         self.altura = 1400
         self.espesor = 3
+        self.diametro = 1000
 
     def calcular_junta_long(self, P, S, E, D):
         """Calcula el espesor de la junta longitudinal."""

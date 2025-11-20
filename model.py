@@ -16,7 +16,10 @@ class Model(QObject):
         super(Model, self).__init__(parent)
         self.cab = Cabezal()
         self.env = Envolvente()
-        
+
+    def set_diametro(self, diametro):
+        self.env.diametro = diametro
+
     def calcular_espesor_envolvente(self):
         print("Calculando espesor de envolvente")
         
